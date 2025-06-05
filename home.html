@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <h1>Atividade com botões</h1>
+    <div class="juncaobotao">
+        <button class="botao1"> clique aqui para mudar o gradiente (verde) </button>
+        <button class="botao2"> clique aqui para mudar o gradiente (amarelo) </button>
+        <button class="botao3"> clique aqui para mudar o gradiente (verde) </button>
+    </div>
+    <script>
+        const botao1 = document.getElementsByClassName("botao1")
+        const botao2 = document.getElementsByClassName("botao2")
+        const botao3 = document.getElementsByClassName("botao3")
+
+        function trocardecor(gradiente) {
+            document.body.style.background = gradiente;
+        }
+
+        botao1.addEventListener("click", () => trocardecor("linear-gradient(to right, #1e3c72, #2a5298)"));
+        botao2.addEventListener("click", () => trocardecor("linear-gradiente(to left, #ffffff, blue, #000000)"));
+    </script>
+</body>
+
+</html>
